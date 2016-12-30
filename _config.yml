@@ -21,8 +21,8 @@ sass:
 theme_mode: dark  # choices are: 'dark', 'standard', 'markdown'
 
 # Customizations
-your_name: wemake.services
-email: mail@sobolevn.me
+your_name: vol.yevtushenko
+email: vol.yevtushenk@ukr.net
 
 navigation:
   - text: Home
@@ -50,8 +50,8 @@ projects:
 
 social:
   - service: github
-    username: sobolevn
-    link: https://github.com/sobolevn
+    username: nuncostans
+    link: https://github.com/nuncostans
   - service: twitter
     username: sobolevn
     link: https://twitter.com/sobolevn
