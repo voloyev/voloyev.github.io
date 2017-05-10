@@ -3,8 +3,8 @@ layout: post
 title:  "Eqilibrium index"
 date:   2017-05-10 23:22
 comments: true
-categories: ruby algorithm 
----
+
+# categories: ruby #
 
 ```ruby
 def equilib(list)
@@ -24,7 +24,7 @@ end
 p equilib([-1, 3, -4, 5, 1, -6, 2, 1])
 ```
 
-## ruby whith while
+## ruby whith while ##
 
 ```ruby
 def eq(arr)
@@ -40,7 +40,8 @@ end
 
 p eq([-1, 3, -4, 5, 1, -6, 2, 1])
 ```
-## and python
+
+## and python ##
 
 ```python
 def eqilibrium_index(list):
