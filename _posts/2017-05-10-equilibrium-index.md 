@@ -25,6 +25,7 @@ p equilib([-1, 3, -4, 5, 1, -6, 2, 1])
 ```
 
 ## ruby whith while
+
 ```ruby
 def eq(arr)
 right = arr.reduce(:+) # sum of all elements in array
@@ -39,8 +40,8 @@ end
 
 p eq([-1, 3, -4, 5, 1, -6, 2, 1])
 ```
-
 ## and python
+
 ```python
 def eqilibrium_index(list):
     left = 0
