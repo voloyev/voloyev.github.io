@@ -43,3 +43,8 @@ func (d dog) greet() string {
 }
 
 ```
+
+- interface is *not* a `generic`
+- interface is implicit
+- inerface is a contract to help us manage types
+- interface is tough
