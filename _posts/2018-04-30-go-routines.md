@@ -1,12 +1,12 @@
 ---
 layout: post
-title:  "Go interfaces"
+title:  "Go routines"
 date:   2018-04-30 13:16
 comments: true
 categories: go
 ---
 
-Lets look at folowing codeclimate
+Lets look at folowing code
 
 ```go
 package main
@@ -43,4 +43,4 @@ func checkLink(link string) {
 
 ```
 
-And thiink how we are going to make it more async.
+And think how we are going to make it more async.
