@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Go notes"
+title:  "Notes about stdout && stdin"
 date:   2018-10-13 14:00
 comments: true
 categories: bash
