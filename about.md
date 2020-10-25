@@ -4,4 +4,5 @@ title: About
 permalink: /about/
 ---
 
-[github](github.com/voloyev) 
+[github](https://www.github.com/voloyev)
+[twitter](https://www.twitter.com/voloyev)
