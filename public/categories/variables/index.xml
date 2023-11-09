@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>variables on Notes</title>
+    <link>https://voloyev.github.io/categories/variables/</link>
+    <description>Recent content in variables on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 11 Feb 2017 13:11:00 +0200</lastBuildDate><atom:link href="https://voloyev.github.io/categories/variables/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>About variables in ruby</title>
+      <link>https://voloyev.github.io/posts/2017-02-11-ruby-variables/</link>
+      <pubDate>Sat, 11 Feb 2017 13:11:00 +0200</pubDate>
+      
+      <guid>https://voloyev.github.io/posts/2017-02-11-ruby-variables/</guid>
+      <description># Local v = &amp;#34;Ruby&amp;#34; # =&amp;gt; &amp;#34;Ruby&amp;#34; v.class # =&amp;gt; String v.kind_of? String # =&amp;gt; true defined? v # =&amp;gt; &amp;#34;local-variable&amp;#34; # Instance @i = &amp;#34;Ruby&amp;#34; # =&amp;gt; &amp;#34;Ruby&amp;#34; defined? @i # =&amp;gt; &amp;#34;instance-variable&amp;#34; # Global $g = &amp;#34;Ruby&amp;#34; # =&amp;gt; &amp;#34;Ruby&amp;#34; defined? $g # =&amp;gt; &amp;#34;global-variable&amp;#34; # Constant C = &amp;#34;Ruby&amp;#34; # =&amp;gt; &amp;#34;Ruby&amp;#34; defined? C # =&amp;gt; &amp;#34;constant&amp;#34; </description>
+    </item>
+    
+  </channel>
+</rss>

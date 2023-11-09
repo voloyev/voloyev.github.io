@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html><head lang="en">
+	<meta charset="utf-8" />
+	<meta http-equiv="X-UA-Compatible" content="IE=edge"><title>Pacman - Notes</title><meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="description" content="Pacman cheetsheet" />
+	<meta property="og:image" content=""/>
+	<meta property="og:title" content="Pacman" />
+<meta property="og:description" content="Pacman cheetsheet" />
+<meta property="og:type" content="article" />
+<meta property="og:url" content="https://voloyev.github.io/posts/2017-05-13-pacman/" /><meta property="article:section" content="posts" />
+<meta property="article:published_time" content="2017-05-13T23:22:00+02:00" />
+<meta property="article:modified_time" content="2017-05-13T23:22:00+02:00" />
+<meta name="twitter:card" content="summary"/>
+<meta name="twitter:title" content="Pacman"/>
+<meta name="twitter:description" content="Pacman cheetsheet"/>
+
+	
+        <link href="https://voloyev.github.io/css/fonts.2c2227b81b1970a03e760aa2e6121cd01f87c88586803cbb282aa224720a765f.css" rel="stylesheet">
+	
+
+	
+	<link rel="stylesheet" type="text/css" media="screen" href="https://voloyev.github.io/css/main.ac08a4c9714baa859217f92f051deb58df2938ec352b506df655005dcaf98cc0.css" />
+
+	
+	
+
+	
+	
+	
+	
+</head>
+<body>
+        <div class="content"><header>
+	<div class="main">
+		<a href="https://voloyev.github.io/">Notes</a>
+	</div>
+	<nav>
+		
+		
+	</nav>
+</header>
+
+<main>
+	<article>
+		<div class="title">
+			<h1 class="title">Pacman</h1>
+			<div class="meta">Posted on May 13, 2017</div>
+		</div>
+		
+
+		<section class="body">
+			<h2 id="довідка-про-команди">Довідка про команди:</h2>
+<p><code>$ pacman --help</code>
+<code>$ pacman -S --help</code></p>
+<h4 id="встановити-пакети">Встановити пакети:</h4>
+<p><code>$ pacman -S gimp gpicview</code></p>
+<h4 id="пошук-по-регулярці">Пошук по регулярці:</h4>
+<p><code>$ pacman -Ss ^ssh</code></p>
+<h4 id="встановити-групу-пакетів">Встановити групу пакетів:</h4>
+<p><code>$ pacman -S --needed base-devel</code></p>
+<h4 id="список-пакетів-що-в-групі">Список пакетів, що в групі:</h4>
+<p><code>$ pacman -Sg base-devel</code></p>
+<h4 id="список-усіх-доступних-груп">Список усіх доступних груп:</h4>
+<h5 id="групи-і-пакети-у-них">групи і пакети у них</h5>
+<p><code>$ pacman -Sgg</code></p>
+<h4 id="тільки-імена-груп">Тільки імена груп</h4>
+<p><code>$ pacman -Sgg | cut -d ' ' -f 1 | uniq</code></p>
+<h4 id="оновити-базу-даних-пакетів">Оновити базу даних пакетів:</h4>
+<p><code>$ pacman -Sy</code></p>
+<h4 id="оновити-встановленні-пакети">Оновити встановленні пакети:</h4>
+<p><code>$ pacman -Su</code></p>
+<h4 id="список-пакетів-що-можуть-бути-оновлені">Список пакетів, що можуть бути оновлені:</h4>
+<p><code>$ pacman -Qu</code></p>
+<h4 id="список-встановлених-пакетів">Список встановлених пакетів:</h4>
+<p><code>$ pacman -Qi</code>
+<code>$ pacman -Qi | grep Name</code></p>
+<h4 id="список-встановленого-пакету-по-регулярці">Список встановленого пакету по регулярці</h4>
+<p><code>$ pacman -Qs ^ssh</code></p>
+<h4 id="список-файлів-що-належать-пакету">Список файлів, що належать пакету:</h4>
+<p><code>$ pacman -Ql mutt</code></p>
+<h4 id="визначити-якому-пакету-належить-файл">Визначити, якому пакету належить файл:</h4>
+<p><code>$ pacman -Qo /usr/bin/mutt</code></p>
+<h4 id="видалити-пакет">Видалити пакет:</h4>
+<p><code>$ pacman -R xorg-xbacklight</code></p>
+<h4 id="видалення-пакета-і-зележностей-до-нього">Видалення пакета і зележностей до нього</h4>
+<p><code>$ pacman -Rsun some_package</code>
+<code>$ pacman -Rcns sniffles</code></p>
+<h4 id="видалння-пакеті-що-були-встановлені-як-залежності">Видалння пакеті, що були встановлені як залежності</h4>
+<p><code>$ pacman -Qdtq</code></p>
+<h4 id="список-усіх-пакетів">Список усіх пакетів</h4>
+<p><code>$ pacman -Qqe &gt; pkglist</code></p>
+<h5 id="встановити-пакети-з-файлу">Встановити пакети з файлу</h5>
+<p><code>$ pacman -S $(cat pkglist)</code></p>
+<h3 id="очистити-кеш">Очистити кеш</h3>
+<p><code>$ pacman -Sc </code></p>
+
+		</section>
+
+		<div class="post-tags">
+			
+			
+			
+		</div>
+		</article>
+</main>
+<footer>
+  <div style="display:flex"></div>
+  <div class="footer-info">
+    2023  <a
+      href="https://github.com/athul/archie">Archie Theme</a> | Built with <a href="https://gohugo.io">Hugo</a>
+  </div>
+</footer>
+
+
+</div>
+    </body>
+</html>

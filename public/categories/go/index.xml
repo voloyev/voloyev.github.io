@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>go on Notes</title>
+    <link>https://voloyev.github.io/categories/go/</link>
+    <description>Recent content in go on Notes</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Mon, 30 Apr 2018 13:16:00 +0200</lastBuildDate><atom:link href="https://voloyev.github.io/categories/go/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Go routines</title>
+      <link>https://voloyev.github.io/posts/2018-04-30-go-routines/</link>
+      <pubDate>Mon, 30 Apr 2018 13:16:00 +0200</pubDate>
+      
+      <guid>https://voloyev.github.io/posts/2018-04-30-go-routines/</guid>
+      <description>Lets look at folowing code
+package main import ( &amp;#34;fmt&amp;#34; &amp;#34;net/http&amp;#34; ) func main() { links := []string{ &amp;#34;http://google.co&amp;#34;, &amp;#34;http://facebook.com&amp;#34;, &amp;#34;http://golang.org&amp;#34;, &amp;#34;http://cafephilo.lviv.ua&amp;#34;, &amp;#34;http://http://10.6.193.162:3000/&amp;#34;, &amp;#34;http://10.25.12.143:3000/&amp;#34;, } for _, el := range links { checkLink(el) } } func checkLink(link string) { _, err := http.Get(link) if err != nil { fmt.Println(link, &amp;#34;it might be down&amp;#34;) return } fmt.Println(link, &amp;#34;is up&amp;#34;) } And think how we are going to make it more async.</description>
+    </item>
+    
+    <item>
+      <title>Go interfaces</title>
+      <link>https://voloyev.github.io/posts/2018-04-18-go-interfaces/</link>
+      <pubDate>Wed, 18 Apr 2018 13:33:00 +0200</pubDate>
+      
+      <guid>https://voloyev.github.io/posts/2018-04-18-go-interfaces/</guid>
+      <description>import ( &amp;#34;fmt&amp;#34; &amp;#34;strings&amp;#34; ) type animal interface { greet() string } type cat struct {name string} type dog struct {name string} func main() { bob := cat{name: &amp;#34;Bob&amp;#34;} doge := dog{name: &amp;#34;Doge&amp;#34;} fmt.Println(bob.greet()) fmt.Println(doge.greet()) } func (c cat) greet() string { s := []string{c.name, &amp;#34;meow&amp;#34;} return strings.Join(s, &amp;#34;,&amp;#34;) } func (d dog) greet() string { voice := make([]string, 3) for i,_ := range(voice) { voice[i] = d.name } return strings.</description>
+    </item>
+    
+    <item>
+      <title>Go notes</title>
+      <link>https://voloyev.github.io/posts/2018-04-18-go/</link>
+      <pubDate>Wed, 18 Apr 2018 11:22:00 +0200</pubDate>
+      
+      <guid>https://voloyev.github.io/posts/2018-04-18-go/</guid>
+      <description>Pointers In go everything pass by value. That means when you pass value as argument to function go copies the value.
+Example:
+type person struct{ name string age int } bob := person{name: &amp;#34;Bob&amp;#34;, age: 22,} func(p person) changeName(newName string){ p.name = newName } bob.changeName(&amp;#34;Alice&amp;#34;) // we expect that function will change name from Bob to Alice // But no fmt.Println(bob.name) // return bob to fix this we need to change argument</description>
+    </item>
+    
+  </channel>
+</rss>
