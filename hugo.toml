@@ -3,7 +3,9 @@ languageCode = 'en-us'
 title = 'Notes'
 theme = 'archie'
 
-
+[services]
+  [services.googleAnalytics]
+    ID = 'G-FFLK202G5N'  # Replace with your GA4 measurement ID
 
 [markup]
   [markup.highlight]
