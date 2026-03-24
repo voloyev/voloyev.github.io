@@ -1,0 +1,42 @@
+{{ define "main" }}
+  {{ .Content }}
+
+  {{ $posts := where .Site.RegularPages "Section" "posts" }}
+  {{ $sortedPosts := sort $posts "Date" "desc" }}
+  {{ $latestPost := first 1 $sortedPosts }}
+  {{ $otherPosts := after 1 $sortedPosts }}
+  {{ with $latestPost }}
+    {{ range . }}
+      <h2>Latest Post</h2>
+      <article>
+        <h1><a href="{{ .RelPermalink }}">{{ .Title }}</a></h1>
+        {{ partial "terms.html" (dict "taxonomy" "tags" "page" .) }}
+        {{ .Summary }}
+        {{ if .Truncated }}
+          <p><a href="{{ .RelPermalink }}">Read more...</a></p>
+        {{ end }}
+        <div class="time">
+          {{ partial "date.html" .Date }}
+          {{ if .ReadingTime }}
+            <span class="reading-time"> · {{ .ReadingTime }} min read</span>
+          {{ end }}
+        </div>
+      </article>
+    {{ end }}
+  {{ end }}
+
+  {{ if gt (len $otherPosts) 0 }}
+    <h2>Other Posts</h2>
+    <div class="time-list">
+      <ul>
+        {{ range $otherPosts }}
+          <li>
+            <span>{{- partial "date" .Date -}}</span>
+            <div><a href="{{ .RelPermalink }}">{{ .LinkTitle }}</a></div>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  {{ end }}
+
+{{ end }}
